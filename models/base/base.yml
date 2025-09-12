@@ -1,0 +1,13 @@
+version: 2
+sources:
+  - name: mmc
+    database: DBT_SF_MMC
+    quoting:
+      schema: true
+      identifier: true
+    schema: RAW
+    tables:
+      - name: STG_CRYPTO
+      - name: STG_ETFS
+      - name: STG_FOREX
+      - name: STG_STOCKS
