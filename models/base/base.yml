@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: mmc
+    database: DBT_SF_MMC
+    schema: RAW
+    tables:
+      - name: CRYPTO
+      - name: ETFS
+      - name: FOREX
+      - name: STOCKS
