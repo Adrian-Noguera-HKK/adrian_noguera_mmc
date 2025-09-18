@@ -1,4 +1,5 @@
 {{ config(materialized='table') }}
 
+
 select *
-from {{ source('mmc', 'FOREX') }}
+from {{ source('raw','STG_FOREX') }}

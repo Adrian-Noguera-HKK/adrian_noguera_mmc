@@ -1,4 +1,4 @@
 {{ config(materialized='table') }}
 
 select *
-from {{ source('mmc', 'CRYPTO') }}
+from {{ source('raw','STG_CRYPTO') }}

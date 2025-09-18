@@ -1,4 +1,5 @@
 {{ config(materialized='table') }}
 
+
 select *
-from {{ source('mmc', 'STOCKS') }}
+from {{ source('raw','STG_STOCKS') }}
