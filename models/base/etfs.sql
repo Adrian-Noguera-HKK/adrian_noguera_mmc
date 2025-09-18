@@ -1,4 +1,5 @@
 {{ config(materialized='table') }}
 
+
 select *
-from {{ source('mmc', 'ETFS') }}
+from {{ source('raw','STG_ETFS') }}
