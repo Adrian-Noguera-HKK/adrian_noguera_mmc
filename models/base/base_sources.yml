@@ -1,9 +1,7 @@
-version: 2
-
 sources:
   - name: raw
-    database: DBT_SF_MMC        
-    schema: RAW                 
+    database: DBT_SF_MMC
+    schema: RAW
     tables:
       - name: STG_CRYPTO
       - name: STG_ETFS
