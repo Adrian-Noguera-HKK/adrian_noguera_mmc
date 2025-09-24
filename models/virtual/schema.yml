@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: dim_investment
+    description: "Virtual dimension for investment."
+  - name: dim_marketplace
+    description: "Virtual dimension for marketplace."
+  - name: dim_ticker
+    description: "Virtual dimension for ticker."
+  - name: dim_dt
+    description: "Virtual date dimension."
+  - name: fct_investments
+    description: "Virtual fact investments."
+  - name: vw_fct_investments
+    description: "Virtual wrapper for modeled_vw_fct_investments."

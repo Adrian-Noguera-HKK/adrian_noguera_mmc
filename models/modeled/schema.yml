@@ -1,0 +1,79 @@
+version: 2
+
+models:
+  - name: modeled_dim_investment
+    columns:
+      - name: investment_sk
+        tests: [not_null, unique]
+      - name: investment
+        tests: [not_null]
+      - name: investment_type
+        tests: [not_null]
+
+  - name: modeled_dim_marketplace
+    columns:
+      - name: marketplace_sk
+        tests: [not_null, unique]
+      - name: exchange
+        tests: [not_null]
+      - name: exchange_tz
+
+  - name: modeled_dim_ticker
+    columns:
+      - name: ticker_sk
+        tests: [not_null, unique]
+      - name: symbol
+        tests: [not_null]
+      - name: currency
+      - name: currency_quote
+      - name: currency_name
+      - name: currency_quote_name
+      - name: etf_symbol_desc
+      - name: grics_clsfctn
+
+  - name: modeled_dim_date
+    columns:
+      - name: date_sk
+        tests: [not_null, unique]
+      - name: date
+        tests: [not_null]
+      - name: year
+      - name: short_year
+      - name: monthnumber
+      - name: day
+      - name: month
+      - name: week_day
+      - name: year_month
+      - name: quarter
+      - name: quarter_year
+      - name: end_week
+      - name: fy
+      - name: datenumber
+      - name: week_number
+      - name: quarter_number
+      - name: semester_number
+      - name: day_name
+
+  - name: modeled_fct_investments
+    columns:
+      - name: investment_sk
+        tests: [not_null]
+      - name: ticker_sk
+        tests: [not_null]
+      - name: marketplace_sk
+        tests: [not_null]
+      - name: date_sk
+        tests: [not_null]
+      - name: investment
+      - name: investment_type
+      - name: exchange
+      - name: currency
+      - name: symbol
+      - name: date
+      - name: opening_price
+      - name: closing_price
+      - name: highest_price
+      - name: lowest_price
+      - name: volume
+
+  - name: modeled_vw_fct_investments

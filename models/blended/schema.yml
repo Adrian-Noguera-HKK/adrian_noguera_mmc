@@ -1,0 +1,44 @@
+version: 2
+
+models:
+  - name: blended_dim_investment
+    columns:
+      - name: investment
+        tests: [not_null]
+      - name: investment_type
+        tests: [not_null]
+
+  - name: blended_dim_ticker
+    columns:
+      - name: investment
+        tests: [not_null]
+      - name: investment_type
+        tests: [not_null]
+      - name: symbol
+        tests: [not_null]
+
+  - name: blended_dim_marketplace
+    columns:
+      - name: exchange
+        tests: [not_null]
+      - name: exchange_tz
+        tests: []
+
+  - name: blended_fct_investments
+    columns:
+      - name: investment
+        tests: [not_null]
+      - name: investment_type
+        tests: [not_null]
+      - name: symbol
+        tests: [not_null]
+      - name: dt
+        tests: [not_null]
+
+  - name: blended_dim_date
+    columns:
+      - name: date
+        tests: [not_null, unique]
+      - name: year
+      - name: monthnumber
+      - name: week_number
